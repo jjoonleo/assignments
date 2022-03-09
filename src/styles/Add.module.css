@@ -1,0 +1,86 @@
+.add{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    width: 60vw;
+    
+}
+
+.add ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    background-color: var(--background-color);
+    padding: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin: 15px auto;
+    width: 100%;
+}
+
+.add ul div{
+    margin:auto;
+}
+
+.add ul li{
+    font-size: large;
+    color: var(--text-color);
+    margin: 3px;
+    width: 40vw
+}
+
+.add ul li label{
+    margin-right: 10px;
+}
+
+.submit{
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 15px;
+    color: #000;
+    font-style: bold;
+    font-size: large;
+    width: 50%;
+}
+
+.submit h5{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+select{
+    background-color: var(--accent-color-yellow);
+    padding: 5px;
+}
+
+input{
+    background-color: var(--background-color);
+    border: solid var(--accent-color-yellow) 1px;
+    color: var(--text-color);
+    padding: 5px;
+    width:70%;
+}
+
+@media screen and (max-width: 600px){
+    .add{
+        width: 90vw;
+        
+    }
+    .add ul{
+        padding: 0px;
+    }
+    .add ul li{
+        width: 50vw;
+    }
+}

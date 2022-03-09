@@ -1,0 +1,32 @@
+h1{
+    font-size: 2rem;
+    color: var(--text-color);
+    margin: 0px;
+    padding: 0px;
+}
+
+.tomorrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60vw;
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.title{
+    text-align: center;
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 450px){
+    .tomorrow{
+        width: 80vw;
+    }
+}

@@ -1,0 +1,32 @@
+.item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    padding: 0px;
+    margin: auto;
+}
+
+.item li{
+    font-size: large;
+    color: var(--text-color);
+    text-align: center;
+    margin: 3px;
+}
+
+.item button{
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+.item button h5{
+    background-color: rgba(0,0,0,0);
+    color: var(--text-color);
+    border: solid var(--accent-color);
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+.item button h5:hover{
+    background-color: var(--accent-color);
+}

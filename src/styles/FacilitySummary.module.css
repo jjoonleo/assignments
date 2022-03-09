@@ -1,0 +1,101 @@
+.container{
+    width: 50%;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgba(0,0,0,0.2);
+    padding: 1% 5%;
+    background-color: #f5f5f5;
+    
+}
+.container:hover{
+    box-shadow: 2.9px 5.8px 5.8px hsl(0deg 0% 0% /0.41);
+    cursor: pointer;
+}
+
+hr{
+    border: 1px solid black;
+    width: 40px;
+    margin: 0;
+}
+
+.container > hr{
+    border:black solid 3px;
+    width: 66%;
+
+}
+
+.studycafe_container,
+.office_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.studycafe_container *{
+    vertical-align: middle;
+}
+
+.office_container h1,
+.studycafe_container h1{
+    font-size: 1.8em;
+    width: 150px;
+    padding: 3%;
+    padding-right: 30%;
+    margin: 0px;
+}
+
+.office_item,
+.studycafe_item{
+    min-width: 150px;
+    width: 40%;
+    padding: 0px;
+}
+
+.office_item li,
+.studycafe_item li{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.office_item li *
+,.studycafe_item li *{
+    padding: 13px;
+}
+
+.facility{
+    padding-right: 0px;
+}
+
+.floor{
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 40%;
+}
+
+@media screen and (max-width: 1100px) {
+    .office_container h1,
+    .studycafe_container h1{
+        padding-right: 10%;
+    }
+    .container{
+        padding: 1%;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .office_container h1,
+    .studycafe_container h1{
+        padding-right: 10%;
+    }
+    .container{
+        padding: 1%;
+        width: 90%;
+    }
+}
+
