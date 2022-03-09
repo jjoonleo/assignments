@@ -23,6 +23,11 @@ function Home() {
 ];
     return (
         <div className={styles.container}>
+            <script
+          src="https://kit.fontawesome.com/1a2b716621.js"
+          crossorigin="anonymous"
+          
+        ></script>
         <Navbar />
         <Tomorrow/>
         <Add />

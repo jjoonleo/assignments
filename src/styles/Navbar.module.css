@@ -68,22 +68,6 @@ a {
 
 
 
-@keyframes rotateX {
-  0% {
-    opacity: 0;
-    transform: rotateX(-90deg);
-  }
-
-  50% {
-    transform: rotateX(-20deg);
-  }
-
-  100% {
-    opacity: 1;
-    transform: rotateX(0deg);
-  }
-}
-
 
 
 @media screen and (max-width: 900px) {
@@ -103,10 +87,9 @@ a {
     display: flex;
     list-style: none;
     padding: 0px;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     width: 100%;
-    display: none;
   }
 
   .navbar_menu li {
