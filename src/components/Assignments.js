@@ -16,7 +16,7 @@ function Assignments({type}){
             setAssignments(null);
             // loading 상태를 true 로 바꿉니다.
             setLoading(true);
-            const response = await axios.post("http://ejun.kro.kr:8000/assignment", {type: type});
+            const response = await axios.post("http://ejun.kro.kr:8000/assignment");
             setAssignments(response.data); // 데이터는 response.data 안에 들어있습니다.
         } catch (e) {
             setError(e);
@@ -25,7 +25,7 @@ function Assignments({type}){
         };
 
         fetchAssignments();
-    }, []);
+    },[]);
     console.log(error);
     if (loading){
         return (
@@ -54,7 +54,8 @@ function Assignments({type}){
             <h1 className={styles.title}>{title}</h1>
             {assignments.map((assignment) => {
                 console.log(assignment);
-                return <Item assignment={assignment} />;
+                if(assignment.type == type){
+                return <Item assignment={assignment} />;}
             })}
         </span>
     );
