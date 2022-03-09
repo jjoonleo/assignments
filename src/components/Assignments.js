@@ -54,7 +54,8 @@ function Assignments({type}){
             <h1 className={styles.title}>{title}</h1>
             {assignments.map((assignment) => {
                 console.log(assignment);
-                if(assignment.type == type){
+                let date = new Date(assignment.date);
+                if(assignment.type == type && date > new Date()){
                 return <Item assignment={assignment} />;}
             })}
         </span>
