@@ -26,7 +26,6 @@ function Assignments({type}){
 
         fetchAssignments();
     },[]);
-    console.log(error);
     if (loading){
         return (
             <span className={styles.tomorrow}>
@@ -48,15 +47,19 @@ function Assignments({type}){
     }else if(type == "supplies"){
         title = "준비물";
     }
-
+console.log(assignments);
+    let deleteAssignment = (id) => {
+        setAssignments(assignments.filter(assignment => assignment._id !== id))
+        console.log(assignments);
+    }
+    
     return (
         <span className={styles.tomorrow}>
             <h1 className={styles.title}>{title}</h1>
             {assignments.map((assignment) => {
-                console.log(assignment);
                 let date = new Date(assignment.date);
                 if(assignment.type == type && date > new Date()){
-                return <Item assignment={assignment} />;}
+                return <Item assignment={assignment} deleteAssignment={deleteAssignment} />;}
             })}
         </span>
     );

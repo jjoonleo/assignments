@@ -3,21 +3,16 @@ import styles from "../styles/Add.module.css";
 import React, { useState, useEffect} from "react";
 import { useRef } from 'react';
 import { useNavigate } from "react-router-dom";
-import { Alert } from 'react-alert'
 import axios from "axios";
+import { Alert } from 'react-alert'
 
-const Add = () => {
+const Add = ({setRefresh}) => {
     const inputType = useRef(null);
     const inputSubject = useRef(null);
     const inputDate = useRef(null);
     const inputDescription = useRef(null);
-    let navigate = useNavigate();
 
     async function onClick() {
-        console.log(inputType.current.value);
-        console.log(inputDate.current.value);
-        console.log(inputSubject.current.value);
-        console.log(inputDescription.current.value);
         if(inputType.current.value == "" || inputDate.current.value == "" || inputSubject.current.value == "" || inputDescription.current.value == ""){
             alert("모든 항목을 입력해주세요");
             return;
@@ -30,7 +25,7 @@ const Add = () => {
             console.log(data);
             if(data.data.success){
                 alert("추가되었습니다");
-                navigate("/");
+                setRefresh(true);
             }else{
                 alert("추가에 실패했습니다");
             }
