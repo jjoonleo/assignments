@@ -1,5 +1,6 @@
 import styles from '../styles/Item.module.css';
 import axios from "axios";
+import config from "../config.js";
 
 const Item = ({assignment, deleteAssignment}) => {
     
@@ -18,7 +19,7 @@ const Item = ({assignment, deleteAssignment}) => {
     async function handleDeletion(){
         let data;
         try {
-            data = await axios.post("http://ejun.kro.kr:8000/assignment_delete",{id: assignment._id});
+            data = await axios.post(config.server_address+"/assignment_delete",{id: assignment._id});
         } catch {
         }
         deleteAssignment(assignment._id);

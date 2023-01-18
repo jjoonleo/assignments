@@ -1,5 +1,6 @@
 import Todo from "../components/Todo";
 import styles from "../styles/Add.module.css";
+import config from "../config.js";
 import React, { useState, useEffect} from "react";
 import { useRef } from 'react';
 import { useNavigate } from "react-router-dom";
@@ -19,7 +20,7 @@ const Add = ({setRefresh}) => {
         }else{
             let data;
             try {
-                data = await axios.post("http://ejun.kro.kr:8000/assignment_add",{date: inputDate.current.value, subject: inputSubject.current.value, description: inputDescription.current.value, type: inputType.current.value});
+                data = await axios.post(config.server_address + "/assignment_add",{date: inputDate.current.value, subject: inputSubject.current.value, description: inputDescription.current.value, type: inputType.current.value});
             } catch {
             }
             console.log(data);

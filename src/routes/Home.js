@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Tomorrow from '../components/Tomorrow';
 import banner from '../images/banner.jpg';
 import styles from '../styles/Home.module.css';
+import config from '../config.js';
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 
@@ -21,7 +22,7 @@ function Home() {
             // loading 상태를 true 로 바꿉니다.
             setLoading(true);
             
-            const response = await axios.post("http://ejun.kro.kr:8000/assignment");
+            const response = await axios.post(config.server_address+"/assignment");
             setAssignments(response.data); // 데이터는 response.data 안에 들어있습니다.
         } catch (e) {
             setError(e);

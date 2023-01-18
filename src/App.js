@@ -1,6 +1,10 @@
 import './styles/App.css';
 import Home from './routes/Home.js';
 import Facilities from './routes/Facilities.js';
+import Teacher from './routes/Teacher';
+import Test from './routes/test.js';
+import Seats from './routes/Seats.js';
+import config from './config';
 import { firebaseApp } from './firebase';
 import {firebaseMessaging} from "./firebase";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
@@ -19,7 +23,7 @@ getToken(messaging, { vapidKey: 'BMtqJ5KzHKes3ZDBcX1sdvFI0Jz9-a_RZRvo47ZciIUuo8W
     // Send the token to your server and update the UI if necessary
     // ...
     try {
-      axios.post("http://localhost:8000/userToken_add",{token: currentToken});
+      axios.post(config.server_address+"/userToken_add",{token: currentToken});
   } catch {
   }
     console.log(currentToken);
@@ -45,8 +49,11 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/test" element={<div>Not Found</div>} />
+        <Route path="/test" element={<Test />} />
+        <Route path="/seats" element={<Seats />} />
+        <Route path="/teacher" element={<Teacher />} />
         <Route path="/assignments/:type" element={<Facilities />} />
+
       </Routes>
     </Router>
   );

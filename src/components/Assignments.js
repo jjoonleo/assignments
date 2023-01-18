@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Tomorrow.module.css";
+import config from "../config.js";
 import axios from "axios";
 import Item from "../components/Item";
 
@@ -16,7 +17,7 @@ function Assignments({ type }) {
         setAssignments(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.post("http://ejun.kro.kr:8000/assignment");
+        const response = await axios.post(config.server_address+"/assignment");
         setAssignments(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
         setError(e);

@@ -24,7 +24,7 @@ const Navbar = () => {
             <li className={`${styles.dropdown} ${styles.dropdown_2}`}>
               <Link to="/assignments/supplies">준비물</Link>
             </li>
-          <li><Link to="/test">안내사항</Link></li>
+          <li><Link to="/seats">자리 바꾸기</Link></li>
         </ul>
         
 

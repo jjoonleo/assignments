@@ -1,0 +1,64 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.startStop{
+    width: fit-content;
+    background-color: var(--accent-color);
+    margin:20px auto;
+    border-radius: 10%;
+    border: none;
+}
+
+.labelContainer{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.label{
+    margin: 10px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.seat{
+    height: 50px;
+    width: 100%;
+    font-size: 0.7em;
+    border: solid var(--accent-color);
+    color: var(--background-color);
+}
+
+.matrix{
+    margin:auto;
+    display: flex;
+    width: 95%;
+    max-width: 500px;
+    flex-direction: row;
+}
+
+.line{
+    display: flex;
+    width: 18%;
+    flex-direction: column;
+    margin: 1%;
+}
+
+#taken{
+    background-color: red;
+}
+
+#notTaken{
+    background-color: green;
+}
+
+#my{
+    background-color: yellow;
+}

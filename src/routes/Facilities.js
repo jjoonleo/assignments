@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import Assignments from '../components/Assignments';
 import Navbar from '../components/Navbar';
+import Seats from './Seats';
 
 function Facilities(){
     const {type} = useParams();
@@ -13,7 +14,7 @@ function Facilities(){
                 {
                     'homeworks': <Assignments type={type} />,
                     'supplies': <Assignments type={type} />,
-                    'cafe': null,
+                    'seats' : <Seats/>,
                 }[type]
             }
         </div>
